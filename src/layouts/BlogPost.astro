@@ -7,7 +7,8 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, tags } =
+  Astro.props;
 ---
 
 <html lang="en">
@@ -16,27 +17,41 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <style>
       .prose {
         width: 720px;
-        max-width: calc(100% - 2em);
+        max-width: calc(100% - 8px);
         margin: auto;
-        padding: 1em;
       }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
+
       .last-updated-on {
         font-style: italic;
       }
     </style>
   </head>
 
-  <body class="bg-dark-01">
+  <body class="dark:bg-dark-01 bg-light-01">
     <Header />
     <main class="max-w-screen-xl mx-auto px-4">
-      <article>
-        <div class="prose text-gray-300 text-xl leading-relaxed tracking-wide">
-          <div class="text-xl capitalize text-white mb-2">
-            <div class="date">
+      <article class="py-16">
+        <div
+          class="prose dark:text-gray-300 text-dark-02 leading-relaxed text-lg tracking-wide mt-4"
+        >
+          <div class="flex items-center space-x-3">
+            {
+              tags?.map((tag) => (
+                <span class="capitalize text-xs font-semibold text-white bg-primary-100 rounded px-2 py-1">
+                  {tag}
+                </span>
+              ))
+            }
+          </div>
+          <div>
+            <h1
+              class="font-bold sm:text-5xl text-3xl py-4 mb-4 capitalize dark:text-white text-dark-02 sm:leading-snug"
+            >
+              {title}
+            </h1>
+            <div
+              class="date text-sm dark:text-gray-300 text-gray-500 mb-10 sm:px-0 px-2"
+            >
               <FormattedDate date={pubDate} />
               {
                 updatedDate && (
@@ -46,11 +61,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 )
               }
             </div>
-            <h1
-              class="font-bold text-6xl py-4 mb-6 capitalize text-white border-b border-gray-600"
-            >
-              {title}
-            </h1>
+            <div class="h-[0.1px] w-full dark:bg-gray-700 bg-gray-300 mb-10">
+            </div>
           </div>
           <slot />
         </div>

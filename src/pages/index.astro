@@ -14,35 +14,34 @@ const posts = (await getCollection("blog"))
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="bg-dark-01 font-sans">
+  <body class="dark:bg-dark-01 bg-light-01 font-sans">
     <Header title={SITE_TITLE} />
     <main>
-      <section class="max-w-screen-xl mx-auto px-4">
+      <section class="max-w-screen-xl mx-auto px-4 pb-20">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
           <h1
-            class="mb-4 text-4xl font-bold tracking-tight leading-loose md:text-5xl lg:text-6xl text-white"
+            class="mb-4 text-2xl font-bold tracking-tight lg:leading-tight md:text-5xl lg:text-6xl dark:text-white text-dark-01"
           >
             Unlock the Secrets <br /> of Challenging Projects!
           </h1>
           <p
-            class="mb-8 text-lg font-normallg:text-xl sm:px-16 lg:px-48 text-light-01"
+            class="mb-8 sm:text-lg font-normal lg:text-xl sm:px-16 lg:px-48 dark:text-light-01 text-dark-01 text-sm"
           >
             Prepare to unlock the mysteries behind advanced projects, one post
             at a time.
           </p>
         </div>
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid lg:grid-cols-3 md:grid-col-2 grid-cols-1 gap-10">
           {
             posts.map((post) => (
-              <div class="max-w-sm p-6 bg-dark-02 border border-gray-600 rounded-lg shadow">
+              <div class="max-w-sm p-6 dark:bg-dark-02 bg-gray-50  border dark:border-gray-600 border-gray-200 rounded-lg shadow">
                 <a href={`/blog/${post.slug}/`}>
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h5 class="mb-2 sm:text-2xl text-lg font-bold tracking-tight text-gray-900 dark:text-white hover:text-primary-100">
                     {post.data.title}
                   </h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                <p class="mb-3 sm:text-lg text-sm font-normal dark:text-gray-400 text-gray-900">
+                  {post.data.description}
                 </p>
                 <a
                   href={`/blog/${post.slug}/`}
