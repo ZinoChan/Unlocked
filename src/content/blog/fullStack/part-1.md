@@ -87,6 +87,10 @@ If the page includes JavaScript, the browser's JavaScript engine (e.g., V8 for C
 ## 10. Further Interactions
 Once loaded, any subsequent interactions, like clicking links or submitting forms, might trigger more requests to the server or run additional JavaScript.
 
+**Below is a diagram illustrating the whole process**:
+
+<img src="https://res.cloudinary.com/dpfsdplv2/image/upload/v1694678342/internet_xnd9v4.jpg" alt="how internet works" />
+
 In conclusion, The simple act of typing a URL into your browser and pressing Enter initiates a complex symphony of technology working seamlessly together. The process we've walked through happens within seconds and involves a combination of local operations, network protocols, server processes, and browser tasks. The next time you surf the web, you'll have a deeper appreciation of the intricate ballet taking place behind the scenes.
 
 <style>
@@ -124,6 +128,11 @@ h4 {
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 10px;
+}
+
+img{
+	display: inline-block;
+	margin-bottom: 40px;
 }
 
 
