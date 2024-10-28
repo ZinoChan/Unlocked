@@ -137,3 +137,48 @@ you can explore the solar system yourself by clicking on the link below.
 - [WebGL Fundamentals](https://webglfundamentals.org/)
 
 ---
+
+<style>
+	p{
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  @apply sm:text-2xl text:lg;
+}
+ul li, ol li {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+em {
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+ol {
+	 list-style-type: lower-alpha;
+	 list-style-position: inside;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+img{
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+
+</style>
