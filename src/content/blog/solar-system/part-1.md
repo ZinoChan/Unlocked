@@ -129,7 +129,7 @@ This project demonstrates the power of Three.js for creating interactive 3D visu
 
 you can explore the solar system yourself by clicking on the link below.
 
-[https://zinochan.github.io/solar-system/]
+- [Solar System Demo](https://zinochan.github.io/solar-system/)
 
 ## Resources
 
@@ -139,6 +139,9 @@ you can explore the solar system yourself by clicking on the link below.
 ---
 
 <style>
+a {
+	color: blue;
+}
 	p{
 		margin-bottom: 20px;
 		font-size: 16px;
